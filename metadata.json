@@ -1,0 +1,6 @@
+{
+  "name": "Hơi Thở Sạch – Nụ Cười Xanh",
+  "description": "Chiến dịch truyền thông cộng đồng về phòng chống tác hại thuốc lá và bảo vệ sức khỏe thế hệ trẻ.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
