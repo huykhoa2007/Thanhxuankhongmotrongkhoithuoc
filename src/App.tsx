@@ -45,7 +45,7 @@ const AnimatedRoutes = () => {
         <Route path="/" element={<PageWrapper><HomePage /></PageWrapper>} />
         <Route path="/tac-hai" element={<PageWrapper><EffectsPage /></PageWrapper>} />
         <Route path="/thu-dong" element={<PageWrapper><SecondhandPage /></PageWrapper>} />
-        <Route path="/loi-ich" element={<PageWrapper><BenefitsPage /></PageWrapper>} />
+        <Route path="/tuyen-truyen" element={<PageWrapper><BenefitsPage /></PageWrapper>} />
         <Route path="/huong-dan" element={<PageWrapper><GuidePage /></PageWrapper>} />
         <Route path="/luat-phap" element={<PageWrapper><LegalPage /></PageWrapper>} />
         <Route path="/ho-tro" element={<PageWrapper><SupportPage /></PageWrapper>} />
