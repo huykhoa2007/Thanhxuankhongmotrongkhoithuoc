@@ -46,6 +46,49 @@ const EffectsPage = () => {
       </div>
       <div id="effects-content" className="bg-white rounded-t-[60px] shadow-2xl relative z-20">
         <EffectsSection />
+
+        {/* Video Tuyên Truyền Section */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-32">
+          <div className="bg-slate-950 rounded-[50px] p-8 md:p-16 text-white relative overflow-hidden shadow-2xl border border-white/5">
+            <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-rose-500/10 rounded-full blur-[100px] pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-blue-500/5 rounded-full blur-[80px] pointer-events-none" />
+            
+            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+              <div className="lg:col-span-4 text-left">
+                <span className="uppercase tracking-widest text-xs font-black text-rose-500 mb-3 block">Tài Liệu Truyền Thông</span>
+                <h3 className="text-3xl md:text-5xl font-black italic uppercase tracking-tighter mb-6 leading-tight">
+                  Phim Ngắn <br/>Cảnh Tỉnh
+                </h3>
+                <p className="text-slate-400 font-medium leading-relaxed mb-8">
+                  Hãy cùng bám sát thước phim tuyên truyền trực quan phản ánh chân thực hậu quả tàn khốc của khói thuốc đối với sức khỏe và cuộc sống của gia đình Việt, mang đến thông điệp cảnh tỉnh sâu sắc.
+                </p>
+                <div className="flex items-center gap-3 text-slate-400">
+                  <div className="w-2 h-2 rounded-full bg-rose-500 animate-pulse" />
+                  <span className="text-xs font-mono uppercase tracking-wider">Tình trạng: Sẵn sàng phát</span>
+                </div>
+              </div>
+              <div className="lg:col-span-8">
+                <motion.div 
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className="relative aspect-video w-full rounded-[30px] overflow-hidden shadow-2xl border-4 border-white/10 bg-black/40"
+                >
+                  <iframe
+                    className="absolute inset-0 w-full h-full"
+                    src="https://www.youtube.com/embed/Jg1zInWiP5s"
+                    title="Video tuyên truyền tác hại thuốc lá"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  ></iframe>
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="flex justify-center bg-white pb-16">
           <ScrollIndicator targetId="tobacco-types" color="text-slate-400" />
         </div>
