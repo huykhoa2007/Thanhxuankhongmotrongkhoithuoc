@@ -3,10 +3,13 @@ import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { Cigarette, ArrowRight } from 'lucide-react';
 
+// Import ảnh nền cục bộ nằm cùng thư mục src/components
+import heroBgImg from './thuoooc.jpg'; 
+
 const SmokeEffect = () => {
   return (
     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-20 pointer-events-none">
-      {[...Array(6)].map((_, i) => (
+      {Array.from({ length: 6 }).map((_, i) => (
         <motion.div
           key={i}
           initial={{ opacity: 0, y: 0, x: 0, scale: 0.5 }}
@@ -69,15 +72,15 @@ const Hero = () => {
           {/* Advanced Cinematic Overlay */}
           <div className="absolute inset-0 z-0">
             <img 
-              src="https://images.unsplash.com/photo-1542332213-31f87348057f?q=80&w=2000&auto=format&fit=crop" 
+              src={heroBgImg} 
               alt="Nature Freshness"
-              className="w-full h-full object-cover opacity-40 mix-blend-screen transition-all duration-1000 scale-110 group-hover:scale-105"
+              className="w-full h-full object-cover opacity-30 mix-blend-screen transition-all duration-1000 scale-110 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-tr from-slate-900 via-slate-900/60 to-transparent" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(15,23,42,0.6)_100%)] contrast-125" />
             
             {/* Animated Light Streaks */}
-            {[...Array(3)].map((_, i) => (
+            {Array.from({ length: 3 }).map((_, i) => (
               <motion.div
                 key={i}
                 animate={{
@@ -90,27 +93,27 @@ const Hero = () => {
                   delay: i * 3,
                   ease: "linear"
                 }}
-                className="absolute top-0 bottom-0 w-64 bg-gradient-to-r from-transparent via-school-green/20 to-transparent -skew-x-12"
+                className="absolute top-0 bottom-0 w-64 bg-gradient-to-r from-transparent via-emerald-500/20 to-transparent -skew-x-12"
                 style={{ top: `${i * 30}%`, height: '20%' }}
               />
             ))}
             
             {/* Animated Particles */}
-            {[...Array(15)].map((_, i) => (
+            {Array.from({ length: 15 }).map((_, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0 }}
                 animate={{
                   opacity: [0, 0.4, 0],
                   y: [-20, -120],
-                  x: Math.random() * 400 - 200,
+                  x: (i * 20) - 150,
                 }}
                 transition={{
-                  duration: 4 + Math.random() * 4,
+                  duration: 4 + (i % 3),
                   repeat: Infinity,
-                  delay: Math.random() * 5,
+                  delay: i * 0.3,
                 }}
-                className="absolute bottom-0 left-1/2 w-1 h-1 bg-school-green rounded-full blur-[1px]"
+                className="absolute bottom-0 left-1/2 w-1 h-1 bg-emerald-500 rounded-full blur-[1px]"
               />
             ))}
           </div>
@@ -121,14 +124,13 @@ const Hero = () => {
               animate={{ 
                 opacity: 1, 
                 y: 0,
-                boxShadow: ["0 0 0px var(--school-green)", "0 0 20px var(--school-green)", "0 0 0px var(--school-green)"]
+                boxShadow: ["0 0 0px #006837", "0 0 20px #006837", "0 0 0px #006837"]
               }}
               transition={{ 
                 opacity: { delay: 0.3 },
                 boxShadow: { repeat: Infinity, duration: 2 }
               }}
-              style={{ "--school-green": "#006837" } as any}
-              className="inline-block px-4 py-1.5 rounded-full bg-white/10 text-school-yellow text-xs font-black tracking-[0.3em] uppercase mb-8 self-start backdrop-blur-md border border-white/10"
+              className="inline-block px-4 py-1.5 rounded-full bg-white/10 text-amber-400 text-xs font-black tracking-[0.3em] uppercase mb-8 self-start backdrop-blur-md border border-white/10"
             >
               Hơi Thở Sạch – Nụ Cười Xanh
             </motion.span>
@@ -150,7 +152,7 @@ const Hero = () => {
                   x: { repeat: Infinity, duration: 0.1, ease: "linear" },
                   y: { repeat: Infinity, duration: 0.1, ease: "linear" }
                 }}
-                className="text-school-red inline-block"
+                className="text-rose-500 inline-block"
               >thuốc</motion.span> <br/>
                DẬP TẮT <br/>
                <motion.span 
@@ -164,7 +166,7 @@ const Hero = () => {
                   scale: { repeat: Infinity, duration: 4 },
                   rotate: { repeat: Infinity, duration: 0.2, ease: "linear" }
                 }}
-                className="text-school-green block mt-2"
+                className="text-emerald-500 block mt-2"
                >TƯƠNG LAI</motion.span>.
             </motion.h1>
             
@@ -179,7 +181,7 @@ const Hero = () => {
               >
                 <Link
                   to="/tac-hai"
-                  className="px-10 py-5 bg-school-green text-white rounded-full font-black uppercase tracking-widest shadow-2xl shadow-school-green/40 hover:bg-school-green/90 hover:shadow-school-green/60 transition-all flex items-center gap-3 group relative overflow-hidden"
+                  className="px-10 py-5 bg-emerald-600 text-white rounded-full font-black uppercase tracking-widest shadow-2xl shadow-emerald-600/40 hover:bg-emerald-600/90 hover:shadow-emerald-600/60 transition-all flex items-center gap-3 group relative overflow-hidden"
                 >
                   <motion.div 
                     animate={{ x: ["-100%", "200%"] }}
@@ -200,7 +202,7 @@ const Hero = () => {
                     <img src={`https://i.pravatar.cc/100?u=${i}`} alt="User" />
                   </motion.div>
                 ))}
-                <div className="w-12 h-12 rounded-full border-4 border-slate-900 bg-school-green flex items-center justify-center text-[10px] font-black shadow-lg">+1k</div>
+                <div className="w-12 h-12 rounded-full border-4 border-slate-900 bg-emerald-600 flex items-center justify-center text-[10px] font-black shadow-lg">+1k</div>
               </div>
             </div>
           </div>
@@ -236,7 +238,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex-1 bg-school-green rounded-[40px] p-8 text-white relative overflow-hidden group shadow-2xl shadow-school-green/10"
+            className="flex-1 bg-emerald-700 rounded-[40px] p-8 text-white relative overflow-hidden group shadow-2xl shadow-emerald-700/10"
           >
             <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-white/20 rounded-full group-hover:scale-110 transition-transform duration-500" />
             <h2 className="text-3xl font-black mb-6 uppercase tracking-tight italic leading-none">Khi bạn <br/> bỏ thuốc...</h2>
@@ -250,7 +252,7 @@ const Hero = () => {
                   <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 text-[10px] font-bold">✓</div>
                   <div>
                     <p className="font-bold text-sm tracking-tight">{item.label}</p>
-                    <p className="text-xs text-school-cream/80">{item.desc}</p>
+                    <p className="text-xs text-stone-200/80">{item.desc}</p>
                   </div>
                 </li>
               ))}
@@ -263,7 +265,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex-1 bg-amber-400 rounded-[40px] p-8 text-amber-950 flex flex-col justify-between shadow-2xl shadow-amber-400/10 relative overflow-hidden group"
           >
-            {/* Background Illustration */}
+            {/* FIX LỖI DÒNG 270: Đóng chuỗi className và thẻ Cigarette đầy đủ */}
             <div className="absolute -right-4 -bottom-4 opacity-5 group-hover:opacity-10 transition-opacity">
               <Cigarette size={180} className="rotate-[15deg] group-hover:rotate-0 transition-transform duration-700" />
             </div>
