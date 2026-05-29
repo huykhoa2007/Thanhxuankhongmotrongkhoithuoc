@@ -2,6 +2,12 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Cigarette, Laptop, Wind, Flame } from 'lucide-react';
 
+
+import thuocLaDieuImg from './thuốc lá điếu.jpg';
+import thuocLaDienTuImg from './thuốc lá điện tử.jpg';
+import thuocLaoImg from './thuốc lào.jpg';
+import thuocLaNungNongImg from './thuốc lá nung nóng.jpg';
+
 const TobaccoTypes = () => {
   const types = [
     {
@@ -9,28 +15,28 @@ const TobaccoTypes = () => {
       title: "Thuốc Lá Điếu",
       desc: "Chứa hơn 7,000 hóa chất, trong đó có 69 chất gây ung thư. Khói thuốc tạo ra hắc ín (tar) bám chặt vào phổi.",
       color: "bg-slate-100 text-slate-700",
-      image: "https://images.unsplash.com/photo-1521733800235-9610f6655787?q=80&w=1000&auto=format&fit=crop"
+      image: thuocLaDieuImg 
     },
     {
       icon: Laptop,
       title: "Thuốc Lá Điện Tử",
       desc: "Nung nóng dung dịch chứa nicotin và hương liệu tạo khí dung. Chứa kim loại nặng và diacetyl cực nguy hại.",
       color: "bg-blue-100 text-blue-600",
-      image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1000&auto=format&fit=crop"
+      image: thuocLaDienTuImg 
     },
     {
       icon: Wind,
       title: "Thuốc Lào / Shisha",
       desc: "Mỗi lần hút Shisha tương đương với việc hít phải lượng khói của hơn 100 điếu thuốc lá. Nồng độ CO cực cao.",
       color: "bg-indigo-100 text-indigo-600",
-      image: "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?q=80&w=1000&auto=format&fit=crop"
+      image: thuocLaoImg 
     },
     {
       icon: Flame,
       title: "Thuốc Lá Nung Nóng",
       desc: "Nung nóng điếu thuốc ở nhiệt độ thấp hơn. Vẫn chứa nicotine gây nghiện và các chất độc hại tương tự.",
       color: "bg-amber-100 text-amber-700",
-      image: "https://images.unsplash.com/photo-1516062423079-7ca13cdc7f5a?q=80&w=1000&auto=format&fit=crop"
+      image: thuocLaNungNongImg 
     }
   ];
 
