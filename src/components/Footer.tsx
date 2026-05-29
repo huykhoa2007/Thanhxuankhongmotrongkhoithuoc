@@ -61,7 +61,7 @@ const Footer = () => {
               {[
                 { name: 'Tác Hại', href: '/tac-hai' },
                 { name: 'Thụ Động', href: '/thu-dong' },
-                { name: 'Lợi Ích', href: '/loi-ich' },
+                { name: 'Tuyên Truyền', href: '/tuyen-truyen' },
                 { name: 'Hướng Dẫn', href: '/huong-dan' }
               ].map((link) => (
                 <Link 
