@@ -14,7 +14,7 @@ const SiteSearch = () => {
   const siteContent = [
     { keywords: ['tác hại', 'ung thư', 'bệnh', 'phổi', 'tim mạch', 'răng'], title: 'Tác hại của thuốc lá', path: '/tac-hai' },
     { keywords: ['thụ động', 'trẻ em', 'phụ nữ', 'khói thuốc', 'gia đình'], title: 'Hút thuốc thụ động', path: '/thu-dong' },
-    { keywords: ['lợi ích', 'tiền', 'tài chính', 'sức khỏe', 'thời gian'], title: 'Lợi ích khi bỏ thuốc', path: '/loi-ich' },
+    { keywords: ['tuyên truyền', 'tiền', 'tài chính', 'sức khỏe', 'thời gian'], title: 'Lợi ích khi bỏ thuốc', path: '/tuyen-truyen' },
     { keywords: ['hướng dẫn', 'cách bỏ', 'cai thuốc', 'mẹo', 'lộ trình'], title: 'Hướng dẫn cai thuốc', path: '/huong-dan' },
     { keywords: ['luật pháp', 'quy định', 'xử phạt', 'nghị định', 'nơi cấm'], title: 'Luật phòng chống thuốc lá', path: '/luat-phap' },
     { keywords: ['hỗ trợ', 'tổng đài', 'tư vấn', 'liên hệ', 'giúp đỡ'], title: 'Hỗ trợ & Tư vấn', path: '/ho-tro' },
