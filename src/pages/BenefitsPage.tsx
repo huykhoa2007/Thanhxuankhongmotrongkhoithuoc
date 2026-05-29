@@ -15,7 +15,7 @@ const BenefitsPage = () => {
             Hồi sinh cơ thể
           </span>
           <h1 className="text-6xl md:text-8xl font-black text-white italic uppercase tracking-tighter mb-6">
-            Lợi Ích <br/><span className="text-blue-500 underline decoration-8 decoration-blue-500/30 underline-offset-8">Vàng</span>
+            Tuyên Truyền <br/><span className="text-blue-500 underline decoration-8 decoration-blue-500/30 underline-offset-8">Sức Khỏe</span>
           </h1>
           <p className="text-slate-400 max-w-2xl mx-auto text-xl font-medium leading-relaxed mb-12">
             Mỗi phút không có khói thuốc là một phút <span className="text-white italic">sự sống đang quay trở lại</span>. Cơ thể bạn có khả năng tự chữa lành kỳ diệu.
